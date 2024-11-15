@@ -25,6 +25,8 @@ sudo apt-get upgrage
 cd <your-ros-ws>/src
 git clone git@github.com:yoshito-n-students/gazebo_continuous_track.git
 git clone git@github.com:yoshito-n-students/gazebo_continuous_track_example.git
+cd ..
+rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
 ```
 3. Build
 ```
@@ -36,7 +38,7 @@ catkin_make
 ```
 cd <your-ros-ws>
 source devel/setup.bash
-roslaunch gazebo_continuous_example example_track_all_world.launch
+roslaunch gazebo_continuous_truck_example example_track_all_world.launch
 ```
 2. (On another terminal) Send a velocity command to the vehicles
 ```
